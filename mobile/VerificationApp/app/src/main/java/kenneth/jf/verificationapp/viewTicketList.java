@@ -34,6 +34,8 @@ import kenneth.jf.verificationapp.EventListObject;
 import kenneth.jf.verificationapp.R;
 import kenneth.jf.verificationapp.dashboard;
 
+import static android.view.View.GONE;
+import static kenneth.jf.verificationapp.R.id.emptytv;
 import static kenneth.jf.verificationapp.R.layout.test;
 
 
@@ -66,6 +68,10 @@ public class viewTicketList extends Fragment{
             }*/
 
             lv = (ListView)myView.findViewById(R.id.purchasedTixList);
+            TextView fuckJF = (TextView)myView.findViewById(emptytv);
+            if (list.size() > 0 ){
+                fuckJF.setVisibility(GONE);
+            }
             // TicketObject[] arr = (TicketObject[]) list.toArray();
             System.out.println("LIST SIZE " + list.size());
             lv.setAdapter(new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1, list));

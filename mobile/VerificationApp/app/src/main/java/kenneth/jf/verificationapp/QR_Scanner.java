@@ -51,6 +51,7 @@ public class QR_Scanner extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         myView = inflater.inflate(qr_scanning, container, false);
         String qrcode = getActivity().getIntent().getStringExtra("qrcode");
+        System.out.println("get something" + qrcode);
         eventId = Long.valueOf(qrcode);
         Button scanner = (Button) myView.findViewById(R.id.scanner);
         scanner.setOnClickListener(new View.OnClickListener() {

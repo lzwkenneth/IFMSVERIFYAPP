@@ -91,4 +91,8 @@ public class Event implements Parcelable
         index += 1;
         return index;
     }
+
+    public String toString(){
+        return name;
+    }
 }
